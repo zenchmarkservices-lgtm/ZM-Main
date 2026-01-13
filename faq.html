@@ -1,0 +1,454 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>FAQ | Zechmark - Service Assistance Questions</title>
+  <meta name="description" content="Frequently asked questions about Zechmark service assistance. Learn how we guide you on cable, internet, and streaming options." />
+  <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    body.animated-layout {
+      background: #0a0e27;
+      color: #ffffff;
+    }
+    
+    main {
+      background: #0a0e27;
+    }
+
+    .faq-hero {
+      padding: 80px 0;
+      background: linear-gradient(135deg, rgba(102, 126, 234, 0.15) 0%, rgba(118, 75, 162, 0.15) 100%);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    .faq-hero h1 {
+      font-size: 2.8rem;
+      margin-bottom: 16px;
+      color: #ffffff;
+      font-weight: 700;
+    }
+
+    .faq-hero p {
+      font-size: 1.1rem;
+      color: #b0b0b0;
+      max-width: 700px;
+    }
+
+    .faq-content {
+      padding: 80px 0;
+    }
+
+    .faq-container {
+      max-width: 850px;
+      margin: 0 auto;
+    }
+
+    .faq-item {
+      margin-bottom: 20px;
+      padding: 0;
+      border: none;
+      border-radius: 8px;
+      overflow: hidden;
+      background: transparent;
+    }
+
+    .faq-question {
+      width: 100%;
+      padding: 24px;
+      background: rgba(0, 0, 0, 0.4);
+      border: 1px solid rgba(255, 255, 255, 0.15);
+      color: #ffffff;
+      font-size: 1rem;
+      font-weight: 600;
+      cursor: pointer;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      transition: all 0.3s ease;
+      border-radius: 8px;
+      font-family: inherit;
+      text-align: left;
+    }
+
+    .faq-question:hover {
+      background: rgba(102, 126, 234, 0.15);
+      border-color: rgba(102, 126, 234, 0.3);
+    }
+
+    .faq-question span {
+      flex: 1;
+      color: #ffffff;
+    }
+
+    .faq-icon {
+      width: 24px;
+      height: 24px;
+      margin-left: 16px;
+      flex-shrink: 0;
+      transition: transform 0.3s ease;
+      stroke: #667eea;
+    }
+
+    .faq-item.active .faq-icon {
+      transform: rotate(45deg);
+    }
+
+    .faq-answer {
+      padding: 24px;
+      background: rgba(102, 126, 234, 0.08);
+      border: 1px solid rgba(102, 126, 234, 0.2);
+      border-top: none;
+      color: #cccccc;
+      line-height: 1.8;
+      font-size: 1rem;
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.3s ease, opacity 0.3s ease;
+      opacity: 0;
+      border-radius: 0 0 8px 8px;
+    }
+
+    .faq-answer p {
+      margin: 0;
+      color: #cccccc;
+    }
+
+    .faq-answer a {
+      color: #667eea;
+      text-decoration: none;
+      transition: color 0.3s ease;
+    }
+
+    .faq-answer a:hover {
+      color: #7b5dff;
+      text-decoration: underline;
+    }
+
+    .faq-item.active .faq-answer {
+      max-height: 500px;
+      opacity: 1;
+    }
+
+    .faq-cta-box {
+      margin-top: 60px;
+      padding: 40px;
+      background: linear-gradient(135deg, rgba(102, 126, 234, 0.15) 0%, rgba(118, 75, 162, 0.15) 100%);
+      border: 1px solid rgba(102, 126, 234, 0.3);
+      border-radius: 12px;
+      text-align: center;
+    }
+
+    .faq-cta-box h3 {
+      color: #ffffff;
+      font-size: 1.5rem;
+      margin-bottom: 12px;
+    }
+
+    .faq-cta-box p {
+      color: #b0b0b0;
+      font-size: 1.05rem;
+      margin-bottom: 20px;
+    }
+
+    .btn-faq {
+      display: inline-block;
+      padding: 12px 32px;
+      background: #667eea;
+      color: #ffffff;
+      text-decoration: none;
+      border-radius: 6px;
+      font-weight: 600;
+      transition: all 0.3s ease;
+      border: 2px solid #667eea;
+    }
+
+    .btn-faq:hover {
+      background: #7b5dff;
+      border-color: #7b5dff;
+    }
+  </style>
+</head>
+<body class="animated-layout">
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="index.html" aria-label="Zechmark Home">
+        <img src="logo.svg" alt="Zechmark" class="logo" />
+      </a>
+      <nav class="nav">
+        <a href="index.html">Home</a>
+        <a href="faq.html">FAQ</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+        <a class="btn btn-primary" href="contact.html">Contact</a>
+      </nav>
+      <a class="phone" href="tel:+18336190243" style="display:inline-flex;align-items:center;gap:6px;">
+        <img src="icons8-phone-24.png" alt="Phone" style="height:20px;width:20px;" />
+        (833) 619-0243
+      </a>
+    </div>
+  </header>
+
+  <main>
+    <section class="faq-hero">
+      <div class="container">
+        <h1>Frequently Asked Questions</h1>
+        <p>Everything you need to know about Zechmark and how we assist you with expert guidance on cable, internet, and streaming options.</p>
+      </div>
+    </section>
+
+    <section class="faq-content">
+      <div class="container faq-container">
+          
+          <div class="faq-item" onclick="toggleFAQItem(this)">
+            <button class="faq-question">
+              <span>Are you an official cable or internet service provider?</span>
+              <svg class="faq-icon" width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M12 5v14M5 12h14" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+            </button>
+            <div class="faq-answer">
+              <p>No. Zechmark is an independent third-party service assistance startup, founded in 2024. We are not affiliated with, endorsed by, or sponsored by any internet service provider, cable company, telecommunications provider, or streaming platform. We do not sell internet, cable, or streaming services.</p>
+            </div>
+          </div>
+
+          <div class="faq-item" onclick="toggleFAQItem(this)">
+            <button class="faq-question">
+              <span>Do you sell internet, cable, or streaming plans?</span>
+              <svg class="faq-icon" width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M12 5v14M5 12h14" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+            </button>
+            <div class="faq-answer">
+              <p>No. We provide guidance, assistance, and educational support only. We help you understand your options and navigate the selection process, but we never sell subscriptions directly. Your service will come from the provider you choose.</p>
+            </div>
+          </div>
+
+          <div class="faq-item" onclick="toggleFAQItem(this)">
+            <button class="faq-question">
+              <span>Do you charge for your services?</span>
+              <svg class="faq-icon" width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M12 5v14M5 12h14" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+            </button>
+            <div class="faq-answer">
+              <p>Yes. Zechmark charges a service fee for our assistance and guidance. This fee is separate from any charges from your service provider. Our pricing is transparent—you'll know exactly what you're paying for our help.</p>
+            </div>
+          </div>
+
+          <div class="faq-item" onclick="toggleFAQItem(this)">
+            <button class="faq-question">
+              <span>Will I still be billed by my service provider?</span>
+              <svg class="faq-icon" width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M12 5v14M5 12h14" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+            </button>
+            <div class="faq-answer">
+              <p>Yes. Zechmark's service fee is completely separate from your provider's charges. You'll pay Zechmark for assistance and guidance, and you'll pay your chosen provider for internet, cable, or streaming services. Your provider billing remains unchanged.</p>
+            </div>
+          </div>
+
+          <div class="faq-item" onclick="toggleFAQItem(this)">
+            <button class="faq-question">
+              <span>Do you need my account passwords or sensitive information?</span>
+              <svg class="faq-icon" width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M12 5v14M5 12h14" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+            </button>
+            <div class="faq-answer">
+              <p>No. We never request your provider account passwords, credit card information, or other sensitive credentials. We assist you in making informed decisions without needing access to your accounts.</p>
+            </div>
+          </div>
+
+          <div class="faq-item" onclick="toggleFAQItem(this)">
+            <button class="faq-question">
+              <span>Which providers do you support?</span>
+              <svg class="faq-icon" width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M12 5v14M5 12h14" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+            </button>
+            <div class="faq-answer">
+              <p>We provide guidance about multiple cable, internet, and streaming providers in your area. We don't have exclusive partnerships with any provider. Our goal is to help you understand all available options, and we reference multiple providers with equal transparency—never pushing toward any specific company.</p>
+            </div>
+          </div>
+
+          <div class="faq-item" onclick="toggleFAQItem(this)">
+            <button class="faq-question">
+              <span>Are your services refundable?</span>
+              <svg class="faq-icon" width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M12 5v14M5 12h14" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+            </button>
+            <div class="faq-answer">
+              <p>Yes. Refund requests can be submitted within 7 to 15 days of service purchase, depending on the type of assistance provided and whether services have already been delivered. Please review our <a href="refund-policy.html">Refund Policy</a> page for full eligibility details and the complete refund process.</p>
+            </div>
+          </div>
+
+          <div class="faq-item" onclick="toggleFAQItem(this)">
+            <button class="faq-question">
+              <span>How does Zechmark make money if it's truly independent?</span>
+              <svg class="faq-icon" width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M12 5v14M5 12h14" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+            </button>
+            <div class="faq-answer">
+              <p>We make money through service fees paid directly by our customers for our guidance and assistance. We receive no payments, kickbacks, commissions, or incentives from any cable company, ISP, or streaming provider. This is how we maintain complete independence.</p>
+            </div>
+          </div>
+
+          <div class="faq-item" onclick="toggleFAQItem(this)">
+            <button class="faq-question">
+              <span>What happens after I get assistance from Zechmark?</span>
+              <svg class="faq-icon" width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M12 5v14M5 12h14" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+            </button>
+            <div class="faq-answer">
+              <p>After receiving guidance and choosing a provider, you'll contact that provider directly to set up your service. Your ongoing support comes from your chosen provider's customer service team. Zechmark's role is to help you make an informed decision—not to provide ongoing technical support.</p>
+            </div>
+          </div>
+
+          <div class="faq-item" onclick="toggleFAQItem(this)">
+            <button class="faq-question">
+              <span>Is Zechmark affiliated with Google, Facebook, or other tech companies?</span>
+              <svg class="faq-icon" width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M12 5v14M5 12h14" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+            </button>
+            <div class="faq-answer">
+              <p>No. Zechmark is a completely independent startup with no affiliations to technology companies, ISPs, cable providers, or telecommunications companies. We operate independently with one mission: providing transparent guidance.</p>
+            </div>
+          </div>
+
+          <div class="faq-item" onclick="toggleFAQItem(this)">
+            <button class="faq-question">
+              <span>How do I contact Zechmark for assistance?</span>
+              <svg class="faq-icon" width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M12 5v14M5 12h14" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+            </button>
+            <div class="faq-answer">
+              <p>You can reach us 24/7 by phone at <a href="tel:+18336190243">(833) 619-0243</a>, email at <a href="mailto:info@zechmarkcable.com">info@zechmarkcable.com</a>, or by filling out our contact form on the Contact page. Our team is ready to assist you whenever you need guidance.</p>
+            </div>
+          </div>
+
+        <div class="faq-cta-box">
+          <h3>Still have questions?</h3>
+          <p>Our support team is here 24/7 to help</p>
+          <a href="tel:+18336190243" class="btn-faq">Call (833) 619-0243</a>
+        </div>
+      </div>
+    </section>
+    <!-- Call Now Section -->
+    <section style="padding: 60px 0; background: linear-gradient(135deg, rgba(102, 126, 234, 0.15) 0%, rgba(118, 75, 162, 0.15) 100%); text-align: center; border-top: 1px solid rgba(255, 255, 255, 0.1); border-bottom: 1px solid rgba(255, 255, 255, 0.1);">
+      <div class="container">
+        <h2 style="color: #ffffff; margin-bottom: 24px; font-size: 2rem;">Ready to Get Started?</h2>
+        <a href="tel:+18336190243" style="display: inline-flex; align-items: center; gap: 12px; background: #ff6b6b; color: #ffffff; padding: 16px 40px; border-radius: 8px; text-decoration: none; font-weight: 600; font-size: 1.1rem; transition: all 0.3s ease; border: 2px solid #ff6b6b;">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+          <span>Call Now: (833) 619-0243</span>
+        </a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div>
+        <img src="logo.svg" alt="Zechmark Assistance" class="logo small" />
+        <p>Zechmark is an independent service assistance startup, founded in 2024, dedicated to helping you navigate cable, internet, and streaming options with transparency and expertise.</p>
+        <a class="phone" href="tel:+18336190243" style="margin-top:8px;">(833) 619-0243</a>
+        <a href="mailto:info@zechmarkcable.com" style="display:block; margin-top:8px; color: #666; text-decoration: none;">info@zechmarkcable.com</a>
+      </div>
+      <nav>
+        <h4>Company</h4>
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="faq.html">FAQ</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+      <nav>
+        <h4>Legal</h4>
+        <a href="privacy-policy.html">Privacy Policy</a>
+        <a href="terms-conditions.html">Terms & Conditions</a>
+        <a href="refund-policy.html">Refund Policy</a>
+      </nav>
+    </div>
+    <div class="container subfooter">
+      <p>© <span id="year"></span> Zechmark. All rights reserved.</p>
+      <div style="margin-top: 20px; padding: 20px; background: #f5f5f5; border-radius: 4px; font-size: 13px; color: #666; line-height: 1.6;">
+        <strong>IMPORTANT DISCLOSURE:</strong> Zechmark is an independent third-party service assistance startup, founded in 2024. We are NOT affiliated with, endorsed by, sponsored by, or representing any internet service provider (ISP), cable company, telecommunications company, streaming platform, or brand mentioned on this website. We do not sell internet, cable, or streaming services. We provide guidance and assistance at transparent service fees, separate from provider charges. We never request provider passwords or sensitive credentials. All trademarks and provider references are for informational purposes only and belong to their respective owners.
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    function toggleFAQItem(element) {
+      element.classList.toggle('active');
+    }
+    
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+
+  <!-- Sticky Call Button -->
+  <style>
+    .sticky-call-button {
+      position: fixed;
+      bottom: 30px;
+      right: 30px;
+      z-index: 999;
+      animation: slideInRight 0.5s ease-out;
+    }
+
+    .call-btn-sticky {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      width: 70px;
+      height: 70px;
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      color: #ffffff;
+      border-radius: 50%;
+      text-decoration: none;
+      box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4);
+      transition: all 0.3s ease;
+      gap: 4px;
+      font-size: 10px;
+      font-weight: 600;
+      text-align: center;
+      padding: 8px;
+    }
+
+    .call-btn-sticky:hover {
+      transform: scale(1.1);
+      box-shadow: 0 6px 20px rgba(102, 126, 234, 0.6);
+      background: linear-gradient(135deg, #7b5dff 0%, #764ba2 100%);
+    }
+
+    .call-btn-sticky svg {
+      width: 24px;
+      height: 24px;
+    }
+
+    .call-btn-sticky .phone-number {
+      font-size: 9px;
+      line-height: 1.2;
+      opacity: 0.9;
+    }
+
+    @media (max-width: 768px) {
+      .sticky-call-button {
+        bottom: 20px;
+        right: 20px;
+      }
+
+      .call-btn-sticky {
+        width: 65px;
+        height: 65px;
+      }
+    }
+
+    @keyframes slideInRight {
+      from {
+        opacity: 0;
+        transform: translateX(100px);
+      }
+      to {
+        opacity: 1;
+        transform: translateX(0);
+      }
+    }
+  </style>
+
+  <div class="sticky-call-button">
+    <a href="tel:+18336190243" class="call-btn-sticky">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
+      </svg>
+      <span>Call Now</span>
+      <span class="phone-number">(833) 619-0243</span>
+    </a>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
