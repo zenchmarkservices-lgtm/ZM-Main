@@ -1452,7 +1452,7 @@ body {
 .hero-content-side {
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-start;
   padding: 2rem 3rem;
   position: relative;
   z-index: 2;
@@ -1464,7 +1464,8 @@ body {
 
 .hero-content-wrapper {
   max-width: 600px;
-  margin: 0 auto;
+  width: 100%;
+  margin: 0;
 }
 
 .hero-badge {
