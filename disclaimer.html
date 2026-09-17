@@ -6,7 +6,16 @@
   <title>Disclaimer | Zechmark - Independent Service Assistance</title>
   <meta name="description" content="Zechmark Disclaimer. Important information about our independent status and service offerings." />
   <link rel="icon" type="image/svg+xml" href="favicon.svg" />
-  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="style.css?v=2" />
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=AW-17761273047"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'AW-17761273047');
+  </script>
   <style>
     body.animated-layout {
       background: #0a0e27;
@@ -191,6 +200,9 @@
         <img src="icons8-phone-24.png" alt="Phone" style="height:20px;width:20px;" />
         (833) 604-0387
       </a>
+      <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false" onclick="toggleMobileNav(this)">
+        <span></span><span></span><span></span>
+      </button>
     </div>
   </header>
 
@@ -489,6 +501,6 @@
     }
   </style>
 
-  <script src="script.js"></script>
+  <script src="script.js?v=2"></script>
 </body>
 </html>

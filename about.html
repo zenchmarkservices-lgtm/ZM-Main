@@ -6,7 +6,16 @@
   <title>About Us | Zechmark Cable Guidance</title>
   <meta name="description" content="Learn about Zechmark Cable Guidance - an independent third-party service assistance provider offering transparent guidance on internet and cable services." />
   <link rel="icon" type="image/svg+xml" href="favicon.svg" />
-  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="style.css?v=2" />
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=AW-17761273047"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'AW-17761273047');
+  </script>
 </head>
 <body>
   <header class="site-header">
@@ -24,6 +33,9 @@
         <img src="icons8-phone-24.png" alt="Phone" style="height:20px;width:20px;" />
         (833) 604-0387
       </a>
+      <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false" onclick="toggleMobileNav(this)">
+        <span></span><span></span><span></span>
+      </button>
     </div>
   </header>
 
@@ -204,6 +216,6 @@
       <p>© <span id="year"></span> Zechmark Cable. All rights reserved.</p>
     </div>
   </footer>
-  <script src="script.js"></script>
+  <script src="script.js?v=2"></script>
 </body>
 </html>

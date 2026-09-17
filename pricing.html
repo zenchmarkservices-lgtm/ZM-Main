@@ -6,7 +6,16 @@
   <title>Pricing | Zechmark Cable</title>
   <meta name="description" content="Compare Zechmark Cable internet, cable, and bundle plans with transparent pricing and no surprises." />
   <link rel="icon" type="image/svg+xml" href="favicon.svg" />
-  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="style.css?v=2" />
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=AW-17761273047"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'AW-17761273047');
+  </script>
 </head>
 <body>
   <header class="site-header">
@@ -23,6 +32,9 @@
         <a class="btn btn-primary" href="contact.html">Contact</a>
       </nav>
       <a class="phone" href="tel:+18336040387">(833) 604-0387</a>
+      <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false" onclick="toggleMobileNav(this)">
+        <span></span><span></span><span></span>
+      </button>
     </div>
   </header>
 
@@ -266,6 +278,6 @@
       <p>© <span id="year"></span> Zechmark Cable. All rights reserved.</p>
     </div>
   </footer>
-  <script src="script.js"></script>
+  <script src="script.js?v=2"></script>
 </body>
 </html>

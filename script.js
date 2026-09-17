@@ -163,20 +163,113 @@
     document.body.classList.add('loaded');
   });
 
+  // Auto-open the call modal shortly after the page finishes loading
+  const autoCallModal = document.getElementById('callModal');
+  if (autoCallModal) {
+    window.addEventListener('load', () => {
+      setTimeout(() => {
+        openCallModal();
+      }, 1800);
+    });
+  }
+
+  // Only reveal the sticky call button once it can't collide with the
+  // hero's own call-now button (or, on pages without a hero, once the
+  // user has scrolled a little), and hide it again over the footer so it
+  // doesn't sit on top of page content or the legal disclosure text.
+  const stickyBtn = document.querySelector('.sticky-call-button');
+  if (stickyBtn && 'IntersectionObserver' in window) {
+    const heroCta = document.querySelector('.hero-cta-group');
+    const footer = document.querySelector('.site-footer');
+    let pastHero = false;
+    let overFooter = false;
+
+    const updateStickyVisibility = () => {
+      stickyBtn.classList.toggle('visible', pastHero && !overFooter);
+    };
+
+    if (heroCta) {
+      const ctaObserver = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+          // Only reveal once the CTA has been scrolled past (above the
+          // viewport) - not merely because it hasn't been reached yet.
+          pastHero = !entry.isIntersecting && entry.boundingClientRect.top < 0;
+          updateStickyVisibility();
+        });
+      }, { threshold: 0 });
+      ctaObserver.observe(heroCta);
+    } else {
+      const handleScroll = () => {
+        pastHero = window.scrollY > 300;
+        updateStickyVisibility();
+      };
+      window.addEventListener('scroll', handleScroll, { passive: true });
+      handleScroll();
+    }
+
+    if (footer) {
+      const footerObserver = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+          overFooter = entry.isIntersecting;
+          updateStickyVisibility();
+        });
+      }, { threshold: 0, rootMargin: '0px 0px -85% 0px' });
+      footerObserver.observe(footer);
+    }
+
+    updateStickyVisibility();
+  } else if (stickyBtn) {
+    stickyBtn.classList.add('visible');
+  }
+
 })();
+
+// Mobile nav toggle (hamburger menu)
+function toggleMobileNav(button) {
+  const nav = button.parentElement.querySelector('.nav');
+  if (!nav) return;
+  const isOpen = nav.classList.toggle('open');
+  button.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+  document.body.style.overflow = isOpen ? 'hidden' : '';
+}
+
+function closeMobileNav() {
+  const nav = document.querySelector('.nav.open');
+  const toggle = document.querySelector('.nav-toggle[aria-expanded="true"]');
+  if (nav) nav.classList.remove('open');
+  if (toggle) toggle.setAttribute('aria-expanded', 'false');
+  document.body.style.overflow = '';
+}
+
+document.addEventListener('click', (e) => {
+  const nav = document.querySelector('.nav.open');
+  if (!nav) return;
+  const withinHeader = e.target.closest('.header-inner');
+  if (!withinHeader || e.target.closest('.nav a')) {
+    closeMobileNav();
+  }
+});
+
+document.addEventListener('keydown', (e) => {
+  if (e.key === 'Escape') closeMobileNav();
+});
+
+window.addEventListener('resize', () => {
+  if (window.innerWidth > 900) closeMobileNav();
+});
 
 // FAQ Toggle Function (global scope for onclick)
 function toggleFAQ(button) {
   const faqItem = button.closest('.faq-item');
   const isActive = faqItem.classList.contains('active');
-  
+
   // Close all other FAQ items
   document.querySelectorAll('.faq-item.active').forEach(item => {
     if (item !== faqItem) {
       item.classList.remove('active');
     }
   });
-  
+
   // Toggle current item
   if (isActive) {
     faqItem.classList.remove('active');
@@ -184,3 +277,33 @@ function toggleFAQ(button) {
     faqItem.classList.add('active');
   }
 }
+
+// Call Modal Functions
+function openCallModal() {
+  const modal = document.getElementById('callModal');
+  if (modal) {
+    modal.classList.add('show');
+    document.body.style.overflow = 'hidden';
+  }
+}
+
+function closeCallModal() {
+  const modal = document.getElementById('callModal');
+  if (modal) {
+    modal.classList.remove('show');
+    document.body.style.overflow = 'auto';
+  }
+}
+
+function closeCallModalOnBackdrop(event) {
+  if (event.target.id === 'callModal') {
+    closeCallModal();
+  }
+}
+
+// Close modal on Escape key
+document.addEventListener('keydown', (e) => {
+  if (e.key === 'Escape') {
+    closeCallModal();
+  }
+});
